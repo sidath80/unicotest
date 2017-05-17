@@ -1,0 +1,52 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="gen.soap.core.gcd.assignment.com"
+           targetNamespace="gen.soap.core.gcd.assignment.com" elementFormDefault="qualified">
+    
+    <xs:element name="getGcdRequest">
+      <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="getGcdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="gcd" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+      <xs:element name="getGcdListRequest">
+      <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="getGcdListResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="gcd" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+      <xs:element name="getGcdSumRequest">
+      <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+     <xs:element name="getGcdSumResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="gcd" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

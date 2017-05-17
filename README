@@ -1,0 +1,36 @@
+							             README
+							             ======
+							
+				               gcd-service API 0.0.2 release
+	    		-------------------------------------------------------------
+	    		
+Welcome to the gcd-service API 0.0.2 release!  This release includes versions of the 
+gcd-service API implementation.
+
+JDK Version notes
+=============================================================================================
+
+The gcd-service API supports JDK 1.8 or higher and Maven 3.0 or higher.  Note that I have currently tested this 
+implementation with JDK 1.8
+
+To RUN 
+==============================================================================================
+		1. To build the service : type "mvn clean package" in pom directory.
+		
+		2. Once you build it, It will run the sample tests which are in the (/gcd-service/src/test/java)
+		   
+		3. To run the service (both REST/WSDL) : type "java -jar target\gcd-service-0.0.2-SNAPSHOT.jar"
+		
+		4. Once the service is running , you can access the swagger api via "http://localhost:8080/swagger-ui.html"
+		
+		5. Latest version of the code available at the 
+		
+			Fetch URL: https://github.com/sidath80/payslip.git
+  			Push  URL: https://github.com/sidath80/payslip.git
+  			HEAD branch: master
+  			Remote branch: master tracked
+			
+		
+
+		
+		
