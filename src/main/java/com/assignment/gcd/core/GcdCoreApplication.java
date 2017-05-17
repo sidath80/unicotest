@@ -21,11 +21,8 @@ import com.assignment.gcd.core.jpa.repository.GcdRepository;
 @SpringBootApplication
 @EnableJms
 public class GcdCoreApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(GcdCoreApplication.class, args);
-	}
-
+	
+	
 	@Bean
 	public JmsListenerContainerFactory<?> myFactory(ConnectionFactory connectionFactory,
 			DefaultJmsListenerContainerFactoryConfigurer configurer) {
@@ -44,7 +41,11 @@ public class GcdCoreApplication {
 		converter.setTypeIdPropertyName("_type");
 		return converter;
 	}
-	
+
+	public static void main(String[] args) {
+		SpringApplication.run(GcdCoreApplication.class, args);
+	}
+
 	@Bean
 	public CommandLineRunner setup(GcdRepository gcdRepository) {
 		return (args) -> {

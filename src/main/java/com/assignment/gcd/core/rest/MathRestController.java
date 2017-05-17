@@ -4,6 +4,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jms.core.JmsTemplate;
@@ -26,7 +27,7 @@ public class MathRestController {
 	private GcdRepository numberRepository;
 	
 	@Autowired
-	private ApplicationContext context;
+	private ConfigurableApplicationContext  context;
 
 	@ApiOperation(value = "Add two integers", nickname = "Add two integers")
 	@RequestMapping(value = "/push", method = RequestMethod.POST)
@@ -48,7 +49,7 @@ public class MathRestController {
 	         number2=numberRepository.save(number2);
 			
 			 jmsTemplate.convertAndSend("q", number);
-		     jmsTemplate.convertAndSend("q", number2);
+		     jmsTemplate.convertAndSend("q",number2);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
