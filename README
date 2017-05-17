@@ -32,10 +32,22 @@ To RUN
 		
 		4. Once the service is running , you can access the swagger api via "http://localhost:8080/swagger-ui.html"
 		
-		5. Sample request xml is /gcd-service/get-gcd-request.xml, you have to pass default parameter name as test for all request
+		5. Mysql database connection details : (/gcd-service/src/main/resources/application.properties)
+		
+		                                      url=jdbc:mysql://localhost/dbtest
+                                              username=test
+                                              password=password
+                                              
+           Sample data will be insert into the database automatically. {10,20,30,40}
+		
+		6. Sample request xml is /gcd-service/get-gcd-request.xml, you have to pass default parameter name as test for all request
 		   i:e You can use curl --header "content-type: text/xml" -d @get-gcd-request.xml http://localhost:8080/ws or SOAP interface
 			
-		
+
+Production Deployment
+==============================================================================================	
+This is plan to use AWS cloud environment with AWS elastic beanstalk which is support auto scaling according to the number of request .
+	
 
 		
 		
