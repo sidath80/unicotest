@@ -27,7 +27,7 @@ public class GcdEndpoint {
 	private static final Logger logger = Logger.getLogger(GcdEndpoint.class);
 
 	@Autowired
-	private GcdDataRepository countryRepository;
+	private GcdDataRepository dataService;
 	
 	@Autowired
 	private GcdRepository gcdRepository;
@@ -41,11 +41,7 @@ public class GcdEndpoint {
 	@ResponsePayload
 	public GetGcdResponse getGcd(@RequestPayload GetGcdRequest request) {
 		GetGcdResponse response = new GetGcdResponse();
-		
-		
-		
-		
-		response.setGcd(countryRepository.getGcd());
+		response.setGcd(dataService.getGcd());
 
 		return response;
 	}
@@ -54,10 +50,7 @@ public class GcdEndpoint {
 	@ResponsePayload
 	public GetGcdResponse getGcdList(@RequestPayload GetGcdListRequest request) {
 		GetGcdResponse response = new GetGcdResponse();
-		response.setGcd(countryRepository.getGcd());
-		
-		
-
+		response.setGcd(dataService.getGcd());
 		return response;
 	}
 	
@@ -76,7 +69,7 @@ public class GcdEndpoint {
 			for(int i=0;i<numbers.size();i++){
 				myIntArray[i]=numbers.get(i).getNumber();
 			}
-			gcd=countryRepository.findGcd(myIntArray);	
+			gcd=dataService.findGcd(myIntArray);	
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

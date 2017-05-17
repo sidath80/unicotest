@@ -15,6 +15,14 @@ implementation with JDK 1.8
 
 To RUN 
 ==============================================================================================
+
+		0. Latest version of the code available at the 
+		
+			Fetch URL: https://github.com/sidath80/unicotest.git
+  			Push  URL: https://github.com/sidath80/unicotest.git
+  			HEAD branch: master
+  			Remote branch: master tracked
+  			
 		1. To build the service : type "mvn clean package" in pom directory.
 		
 		2. Once you build it, It will run the sample tests which are in the (/gcd-service/src/test/java)
@@ -23,12 +31,8 @@ To RUN
 		
 		4. Once the service is running , you can access the swagger api via "http://localhost:8080/swagger-ui.html"
 		
-		5. Latest version of the code available at the 
-		
-			Fetch URL: https://github.com/sidath80/unicotest.git
-  			Push  URL: https://github.com/sidath80/unicotest.git
-  			HEAD branch: master
-  			Remote branch: master tracked
+		5. Sample request xml is /gcd-service/get-gcd-request.xml, you have to pass default parameter name as test for all request
+		   i:e You can use curl --header "content-type: text/xml" -d @get-gcd-request.xml http://localhost:8080/ws or SOAP interface
 			
 		
 

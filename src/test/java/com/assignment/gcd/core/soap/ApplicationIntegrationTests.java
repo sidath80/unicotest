@@ -38,7 +38,7 @@ public class ApplicationIntegrationTests {
     public void test2SendAndReceive() {
         WebServiceTemplate ws = new WebServiceTemplate(marshaller);
         GetGcdRequest request = new GetGcdRequest();
-        request.setName("Spain");
+        request.setName("test");
         assertThat(ws.marshalSendAndReceive("http://localhost:"
                 + port + "/ws", request)).isNotNull();
         
@@ -48,7 +48,7 @@ public class ApplicationIntegrationTests {
     public void test3SendAndReceive() {
         WebServiceTemplate ws = new WebServiceTemplate(marshaller);
         GetGcdListRequest request = new GetGcdListRequest();
-        request.setName("Spain");
+        request.setName("test");
         assertThat(ws.marshalSendAndReceive("http://localhost:"
                 + port + "/ws", request)).isNotNull();
         
@@ -58,7 +58,7 @@ public class ApplicationIntegrationTests {
     public void test4SendAndReceive() {
         WebServiceTemplate ws = new WebServiceTemplate(marshaller);
         GetGcdSumRequest request = new GetGcdSumRequest();
-        request.setName("Spain");
+        request.setName("test");
         assertThat(ws.marshalSendAndReceive("http://localhost:"
                 + port + "/ws", request)).isNotNull();
         
