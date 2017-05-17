@@ -46,7 +46,7 @@ To RUN
 
 Production Deployment
 ==============================================================================================	
-This is plan to use AWS cloud environment with AWS elastic beanstalk which is support auto scaling according to the number of request .
+This is plan to use AWS cloud environment with AWS elastic beanstalk which is support auto scaling according to the number of request.
 	
 
 		
