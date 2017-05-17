@@ -28,6 +28,7 @@ To RUN
 		2. Once you build it, It will run the sample tests which are in the (/gcd-service/src/test/java)
 		   
 		3. To run the service (both REST/WSDL) : type "java -jar target\gcd-service-0.0.2-SNAPSHOT.jar"
+		   It will automatically start the jms Q with inthe server (Spring boot & JMS Q)
 		
 		4. Once the service is running , you can access the swagger api via "http://localhost:8080/swagger-ui.html"
 		
